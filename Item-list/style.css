@@ -1,0 +1,83 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+.first-header-div {
+  margin: 0 auto;
+  width: 90%
+}
+.all-lists {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 3rem;
+}
+.item {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+  padding: 1rem;
+  display: flex;
+  font-size: 1.1rem;
+  width: 70%;
+}
+header {
+  background-color: rgb(204, 203, 203);
+}
+header .container {
+  display: flex;
+}
+.for-search {
+  margin-left: auto;
+  margin-top: 2rem;
+}
+.for-search label {
+  font-size: 1.1rem;
+}
+.for-search input {
+  padding: 0.3rem;
+}
+.btn {
+  margin-left: auto;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  background: red;
+  border: 0;
+}
+.btn:hover {
+  background: rgba(255, 0, 0, 0.8);
+  color: #ccc;
+}
+.add-stuff {
+  margin-top: 3rem;
+  margin-left: 3.5rem;
+}
+.add-stuff label {
+  font-size: 1.3rem;
+}
+.add-stuff input {
+  padding: 0.4rem;
+}
+.enter {
+  cursor: pointer;
+  margin-left: 0.4rem;
+  background: rgb(25, 71, 25);
+  border: 0;
+  color: rgb(238, 238, 238);
+  padding: 0.4rem;
+}
+.enter:hover {
+  color: black;
+  background: rgb(8, 202, 8);
+}
+.filter {
+  border: 2px solid red;
+}
+.normal {
+  border: 1px solid #333;
+}
+
