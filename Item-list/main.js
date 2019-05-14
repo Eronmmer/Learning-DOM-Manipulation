@@ -43,3 +43,5 @@ function filterItems(e) { // Replace with Regex some other time...
     }
   })
 }
+
+// Add local storage later
