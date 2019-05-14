@@ -1,3 +1,3 @@
 # Learning-DOM-Manipulation
 
-This repo contains stuff I built when I was learning DOM Manipulation with vanilla JavaScript
+Little things I built while learning DOM Manipulation with vanilla JavaScript.
