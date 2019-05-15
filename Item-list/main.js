@@ -16,6 +16,10 @@ function ready() {
   function addItem(e) {
     e.preventDefault();
     let value = document.querySelector('#add').value;
+    if(value === '') { // How about adding Regex later to prevent adding white spaces, cross site scripting etc🤔🤔
+      alert('Please enter something valid 😃');
+      preventDefault();
+    }
     let createItem = document.createElement('li');
     createItem.className = "item container";
     let createItemText = document.createTextNode(value);
