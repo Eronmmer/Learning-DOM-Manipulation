@@ -8,7 +8,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <header class="header">
+    <h1 class="main-heading center">Issue Tracker 🔥🔥</h1>
+  </header>
+  <main class="main">
+    <div class="add-fresh-issue center">
+      Hey👋 It seems you haven't opened any issues yet. <span class="add-one-here">Add one here</span> <!-- create a dialogue box on clicking 'add one here'-->
+    </div>
+    <div class="modal">
+      <form class="form" name="addIssuesForm">
+        <span class="close-button">&times;</span>
+        <h2>Add a new issue</h2>
+        <div class="form-section ">
+          <label for="issue-title">Issue title: </label>
+          <textarea type="text" id="issue-title" name="issue-title" placeholder="The title of your issue" maxlength="100" required></textarea>
+        </div>
+        <div class="form-section">
+          <label for="description">Describe the issue: </label>
+          <textarea id="description" name="description" placeholder="Describe the issue" required></textarea>
+        </div>
+        <div class="form-section">
+          <label for="recommendation">Recommendation(s): </label>
+          <textarea type="text" id="recommendation" name="recommendation" placeholder="Suggest ways to resolve the issue" required></textarea>
+        </div>
+        <input class="btn form-submit" type="submit" value="Submit">
+      </form>
+    </div>
+    <ul class="issue-lists center">
+      <li class="issue-count"><span style="color:red">&#x2716;</span> <span class="open"></span> Open &nbsp; &nbsp; &#10004; <span class="closed">0</span> closed</li>
+    </ul>
+    <button class="new-issue-button">New issue</button>
+  </main>
+  <footer class="footer"></footer>
   <script src="main.js"></script>
 </body>
 </html>
