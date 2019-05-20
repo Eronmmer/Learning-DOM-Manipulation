@@ -23,6 +23,7 @@ function ready() {
 
   newIssueButton.addEventListener('click', function() {
     modal.style.display = 'block';
+    modal.style.visibility = 'visible';
   })
 
   let form = document.querySelector('.form');
@@ -39,6 +40,8 @@ function ready() {
     let newIssue = document.createElement('li');
     newIssue.className = 'new-issue';
     let issueHeader = document.createElement('p');
+    issueHeader.className = 'issue-header';
+    issueHeader.style.cursor = 'pointer';
     let issueHeaderText = document.createTextNode(issueTitle);
     issueHeader.appendChild(issueHeaderText);
     newIssue.appendChild(issueHeader);
@@ -68,12 +71,17 @@ function ready() {
 
     openSpan.textContent = openIssues;
   }
+  
+  // Declare issue content globally
+  let issueContent = document.createElement('div');
+  issueContent.className = 'issue-content';
 
   // let newIssue = document.querySelector('.new-issue');
-  issueLists.addEventListener('click', closeOrDelete);
+  issueLists.addEventListener('click', issueAction);
 
   function showModal(e) {
     modal.style.display = 'block';
+    modal.style.visibility = 'visible';
   }
 
 
@@ -85,9 +93,12 @@ function ready() {
     if(e.target == modal) {
       modal.style.display = 'none';
     }
+    if(e.target == issueContent) {
+      issueContent.style.display = 'none';
+    }
   }
 
-  function closeOrDelete(e) {
+  function issueAction(e) {
     if(e.target.classList.contains('close-btn')) {
       if(confirm('Are you sure you wanna close this issue?')) {
         let li = e.target.parentElement;
@@ -109,6 +120,31 @@ function ready() {
         let openSpan = document.querySelector('.open');
         openSpan.textContent = openIssues;
       }
+    }
+    if(e.target.classList.contains('issue-header')) {
+        modal.style.display = 'block';
+        modal.style.visibility = 'hidden';
+        let issueTitle = modal.querySelector('#issue-title').value;
+        let description = document.querySelector('#description').value;
+        let recommendation = document.querySelector('#recommendation').value;
+
+        // Issue content that would pop up on clicking the issue title
+        issueContent.innerHTML = 
+          `<div class="issue-content-inner">
+            <span class="close-button issue-content-btn">&times;</span>
+            <h1>${issueTitle}</h1>
+            <h2>Description of the issue</h2>
+            <p>${description}</p>
+            <h2>Things that can be done to resolve the issue</h2>
+            <p>${recommendation}</p>
+          </div>`
+        let main = document.querySelector('.main');
+        main.appendChild(issueContent);
+        issueContent.style.display = 'block';
+
+        document.querySelector('.issue-content-btn').addEventListener('click', function () {
+          issueContent.style.display = 'none';
+        })
     }
   }
 }

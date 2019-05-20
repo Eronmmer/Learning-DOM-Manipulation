@@ -216,6 +216,44 @@ body {
   background: rgb(209, 171, 4);
 }
 
+.issue-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.issue-content-inner {
+  margin: 0 auto;
+  margin-top: 8.7rem;
+  margin-bottom: 2rem;
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 750px;
+  height: 70vh;
+  max-width: 80%;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+  0 10px 30px 0 rgba(0, 0, 0, 0.5);
+  animation-name: modalOpen;
+  animation-duration: 1s;
+}
+
+.issue-header:hover {
+  text-decoration: underline;
+}
+
+.issue-content-inner h1 {
+  text-align: center;
+  margin-top: 1rem;
+  border-bottom: 1px solid #333;
+}
+
 
 
 /* For modal animation */
