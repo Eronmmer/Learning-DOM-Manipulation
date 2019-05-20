@@ -18,18 +18,19 @@ function ready() {
     let value = document.querySelector('#add').value;
     if(value === '') { // How about adding Regex later to prevent adding white spaces, cross site scripting etc🤔🤔
       alert('Please enter something valid 😃');
-      preventDefault();
+      e.preventDefault();
+    } else {
+      let createItem = document.createElement('li');
+      createItem.className = "item container";
+      let createItemText = document.createTextNode(value);
+      createItem.appendChild(createItemText);
+      let button = document.createElement('button');
+      let buttonText = document.createTextNode('X');
+      button.className = "btn";
+      button.appendChild(buttonText);
+      createItem.appendChild(button);
+      allLists.appendChild(createItem);
     }
-    let createItem = document.createElement('li');
-    createItem.className = "item container";
-    let createItemText = document.createTextNode(value);
-    createItem.appendChild(createItemText);
-    let button = document.createElement('button');
-    let buttonText = document.createTextNode('X');
-    button.className = "btn";
-    button.appendChild(buttonText);
-    createItem.appendChild(button);
-    allLists.appendChild(createItem);
   }
 
   function removeItem(e) {
