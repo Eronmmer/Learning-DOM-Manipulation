@@ -132,11 +132,12 @@ function ready() {
         issueContent.innerHTML = 
           `<div class="issue-content-inner">
             <span class="close-button issue-content-btn">&times;</span>
-            <h1>${issueTitle}</h1>
+            <h1 style="width: 97%">${issueTitle}</h1>
+            <div style="height: 1px; background-color: #555; margin-top: 0; margin: -1rem -1rem 2rem -1rem;"></div>
             <h2>Description of the issue</h2>
-            <p>${description}</p>
+            <p style="max-width: 95%">${description}</p>
             <h2>Things that can be done to resolve the issue</h2>
-            <p>${recommendation}</p>
+            <p style="max-width: 95%">${recommendation}</p>
           </div>`
         let main = document.querySelector('.main');
         main.appendChild(issueContent);

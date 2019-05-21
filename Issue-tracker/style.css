@@ -232,10 +232,9 @@ body {
   margin-top: 8.7rem;
   margin-bottom: 2rem;
   border: 1px solid black;
-  border-radius: 12px;
-  width: 750px;
-  height: 70vh;
-  max-width: 80%;
+  border-radius: 8px;
+  height: auto;
+  width: 80%;
   padding: 1rem;
   background-color: white;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
@@ -251,7 +250,7 @@ body {
 .issue-content-inner h1 {
   text-align: center;
   margin-top: 1rem;
-  border-bottom: 1px solid #333;
+  /* border-bottom: 1px solid #333; */
 }
 
 
