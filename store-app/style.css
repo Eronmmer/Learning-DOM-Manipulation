@@ -2,4 +2,146 @@ body {
   margin: 0;
   padding: 0;
   font-family: arial;
+  background: #dbdbdb;
+}
+
+.main-heading {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+  background: grey;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 3rem;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.item:nth-child(even) {
+  justify-self: right;
+}
+
+.item:nth-child(odd) {
+  justify-self: left;
+}
+
+.item-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.item-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-and-btn {
+  display: flex;
+  margin: 1rem;
+}
+
+.add-to-cart {
+  margin: 0 0 0 auto;
+}
+
+.add-to-cart-btn {
+  padding: 8px 10px;
+  background: rgb(69, 151, 184);
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background: rgb(25, 98, 128);
+}
+
+.footer-caption {
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.cart {
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+}
+
+.cart-row {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.cart-row-content{
+  display: inline-block;
+  /* border-bottom: 1px solid #555; */
+  padding-bottom: 10px;
+}
+
+.cart-row-header {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+.item-header {
+  width: 40%;
+  margin-right: 1rem;
+}
+
+.cart-row-image {
+  width: 40%;
+  margin-right: 1rem;
+}
+
+.price-header {
+  width: 20%;
+  margin-right: 1rem;
+} 
+
+.cart-row-price {
+  width: 20%;
+  /* margin-right: 1rem; */
+}
+
+.quantity-header {
+  width: 30%;
+}
+
+.cart-row-input {
+  width: 30%;
+}
+
+.delete-btn {
+  padding: 8px 10px;
+  background: rgb(158, 38, 29);
+  border: 0;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5rem;
+}
+
+.delete-btn:hover {
+  background: rgb(94, 10, 4);
+}
+
+.flex-cart {
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
