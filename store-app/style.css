@@ -79,11 +79,13 @@ main {
 }
 
 .total {
-  margin: 1rem 4rem 3rem 0;
+  margin: 1rem auto 3rem auto;
   display: flex;
   justify-content: flex-end;
   font-size: 22px;
   font-weight: bold;
+  width: 80%;
+  max-width: 800px;
 }
 
 .purchase {
