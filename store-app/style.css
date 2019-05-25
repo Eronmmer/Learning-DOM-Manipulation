@@ -52,7 +52,8 @@ main {
   margin: 0 0 0 auto;
 }
 
-.add-to-cart-btn {
+.add-to-cart-btn,
+.purchase {
   padding: 8px 10px;
   background: rgb(69, 151, 184);
   border: 0;
@@ -62,7 +63,8 @@ main {
   cursor: pointer;
 }
 
-.add-to-cart-btn:hover {
+.add-to-cart-btn:hover,
+.purchase:hover {
   background: rgb(25, 98, 128);
 }
 
@@ -74,7 +76,22 @@ main {
 
 .cart {
   margin-top: 4rem;
-  margin-bottom: 10rem;
+}
+
+.total {
+  margin: 1rem 4rem 3rem 0;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.purchase {
+  margin: 1rem auto 10rem auto;
+  display: block;
+  padding: 15px 20px;
+  font-size: 23px;
+  border-radius: 8px;
 }
 
 .cart-row {
