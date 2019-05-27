@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(231, 231, 231)
+}
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.main {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  border: 1px solid black;
+  width: 280px;
+  height: auto;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 8px;
+  font-size: 22px;
+  background: grey;
+}
+.row {
+  border-bottom: 1px solid black;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+}
+.btn {
+  cursor: pointer;
+}
+.row div {
+  border-right: 1px solid black;
+  padding: 10px;
+  margin: -1px;
+}
+.first {
+  background: black;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: right;
+  justify-content: baseline;
+}
+.row .input{
+  border-right: 0;
+  align-self: flex-end;
+  font-size: 40px;
+}
+.row:last-child {
+  border-bottom: 0;
+}
+.opr-btn {
+  background: rgb(211, 172, 1);
+  border: 1px solid black;
+}
+.opr-btn:hover {
+  background: rgb(122, 100, 2);
+}
+.first, .second, .third, .fourth, .fifth, .sixth {
+  display: grid;
+}
+.second, .sixth {
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+.third, .fourth, .fifth {
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+.sixth {
+  border-bottom-right-radius: 8px;
+}
+.equals-btn {
+  border-bottom-right-radius: 8px;
+  border-bottom: 0;
+  border-top: 0;
+}
+.zero-btn {
+  border-bottom-left-radius: 8px;
+}
+.norm-btn:hover {
+  background: #333;
+}
